@@ -1,0 +1,19 @@
+server:
+  port: 8999
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: item
+  #datasource:
+  #  username: root
+  #  password: root
+  #  url: jdbc:mysql:///db5
+  #  driver-class-name: com.mysql.jdbc.Driver
+feign:
+  httpclient:
+    connection-timeout: 5000

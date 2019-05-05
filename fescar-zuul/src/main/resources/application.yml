@@ -1,0 +1,25 @@
+server:
+  port: 18085
+spring:
+  application:
+    name: zuul #指定服务名
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    account-dev:
+      path: /account/**         #配置请求URL的请求规则  
+      serviceId:  account        #指定Eureka注册中心中的服务id
+    test1-dev:
+      path: /test/**
+      #serviceId:  test1
+      url:  http://localhost:18080/
+    item-dev:
+      path: /item/**
+      serviceId:  item
+      #url:  http://localhost:8999/
+
