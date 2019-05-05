@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: back              #文件名-的左边
+      profile: dev             #文件名-的右边
+      label: master            #猜测是分支.我在主支上.
+      uri: http://127.0.0.1:12000   #配置类的监听地址.
