@@ -13,7 +13,6 @@ import java.io.IOException;
 public class FescarXidFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("?????????");
         String xid = RootContext.getXID();
         String restXid = request.getHeader("Fescar-Xid");
         System.out.println("全局XID"+restXid);
